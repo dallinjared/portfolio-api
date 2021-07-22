@@ -1,0 +1,38 @@
+[
+    {
+        "position": "IT Project Management",
+        "company": "Avolta",
+        "type": "Intern",
+        "start": "2021-05-05",
+        "end": "",
+        "location": {
+            "city": "Orem", 
+            "state": "Utah"
+        },
+        "description": "Managed various system softwares used throughout the company. Provisioned and deprovisioned employees from company systems. Managed various internal IT Projects and Integrations"
+    },
+    {
+        "position": "Head of Development",
+        "company": "ViewShift Partners",
+        "type": "Part-Time",
+        "start": "2020-09-05",
+        "end": "2021-04-18",
+        "location": {
+            "city": "Provo", 
+            "state": "Utah"
+        },
+        "description": "As the Head of Development, I organized the Technology Division of ViewShift to begin assisting early-stage companies with the implementation of modern technologies and software to promote their business ventures."
+    },
+    {
+        "position": "Inside Sales Representative",
+        "company": "Edge Pest Control",
+        "type": "Full-Time",
+        "start": "2019-07-05",
+        "end": "2020-11-12",
+        "location": {
+            "city": "Orem", 
+            "state": "Utah"
+        },
+        "description": "Generated 530k+ YTD in revenue. Maintained high account quality and retention."
+    }
+]
