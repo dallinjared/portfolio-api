@@ -1,4 +1,5 @@
 const express = require("express");
+require('dotenv').config();
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -22,7 +23,7 @@ app.use(
 );
 app.options('*', cors());
 
-mongoose.connect('mongodb+srv://dbAdmin:43yRZi8slNK8JAiz@rest.iyv4s.mongodb.net/portfolioDatabase?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGO_URL,
     {useNewUrlParser: true,
     useUnifiedTopology: true});
 
