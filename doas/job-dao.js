@@ -1,12 +1,12 @@
-const jobModel = require('../models/job/job-model')
+const Model = require('../models/models')
 
-const findAllJobs = () => jobModel.find();
-const findJobsById = (bid) => jobModel.findById(bid);
-const deleteJobByID = (bid) => jobModel.deleteOne({_id: bid});
-const addNewJob = (newJob) => jobModel.create(newJob);
-const updateJob = (bid, updatedJob) => jobModel.updateOne({"_id": bid}, {$set: updatedJob});
+const findAllJobs = () => Model.jobModel.find();
+const findJobsById = (bid) => Model.jobModel.findById(bid);
+const deleteJobByID = (bid) => Model.jobModel.deleteOne({_id: bid});
+const addNewJob = (newJob) => Model.jobModel.create(newJob);
+const updateJob = (bid, updatedJob) => Model.jobModel.updateOne({"_id": bid}, {$set: updatedJob});
 
-const findJobByCompany = (cname) => jobModel.find({'company' : cname.toLowerCase()});
+const findJobByCompany = (cname) => Model.jobModel.find({"company" : cname}, );
 
 
 module.exports = {

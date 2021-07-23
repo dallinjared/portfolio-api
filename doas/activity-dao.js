@@ -1,7 +1,7 @@
-const activityModel = require('../models/activity/activity-model')
+const Model = require('../models/models')
 
-const findAllActivities = () => activityModel.find()
-const addNewActivity = (newActivity) => activityModel.create(newActivity);
+const findAllActivities = () => Model.activityModel.find()
+const addNewActivity = (newActivity) => Model.activityModel.create(newActivity);
 
 
 module.exports = {

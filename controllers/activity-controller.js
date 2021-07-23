@@ -1,6 +1,8 @@
 const activityService = require('../services/activity-service')
 
 module.exports = function (app) {
+    //Activities
+    
     //Activities -- Get
     app.get('/api/v1/activities/', (req, res) => activityService.findAllActivities().then(allActivities => res.json(allActivities)));
 

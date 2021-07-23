@@ -1,4 +1,11 @@
 const mongoose = require('mongoose');
+
+const activitySchema = mongoose.Schema({
+    title: String,
+    description: String,
+    image: String,
+}, {collection: 'activities'});
+
 const jobSchema = mongoose.Schema({
     position: String,
     company: String,
@@ -18,4 +25,8 @@ const jobSchema = mongoose.Schema({
     },
     description: String,
 }, {collection: 'jobs'});
-module.exports = jobSchema;
+
+module.exports = {
+    activitySchema,
+    jobSchema
+};
