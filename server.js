@@ -26,8 +26,8 @@ mongoose.connect('mongodb+srv://dbAdmin:43yRZi8slNK8JAiz@rest.iyv4s.mongodb.net/
     {useNewUrlParser: true,
     useUnifiedTopology: true});
 
-require("./controllers")(app);
-// require("./controllers/activity-controller")(app);
+require("./controllers/job-controller")(app);
+require("./controllers/activity-controller")(app);
 
 app.listen(process.env.PORT || 3000, () =>
     console.log("Server is running @3000 ...")

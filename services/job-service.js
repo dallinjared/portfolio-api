@@ -1,17 +1,17 @@
 const jobDao = require('../doas/job-dao');
 
 const findAllJobs = () => jobDao.findAllJobs()
-const findJobsByCompany = (company) => jobDao.findJobsByCompany(company)
-const findJobByPosition = (position) => jobDao.findJobByPosition(position)
-const deleteJobByCompany = (company) => jobDao.deleteJobByCompany(company)
+const findJobsById = (bid) => jobDao.findJobsById(bid)
+const findJobByCompany = (cname) => jobDao.findJobByCompany(cname)
+const deleteJobByID = (bid) => jobDao.deleteJobByID(bid)
 const addNewJob = (newJob) => jobDao.addNewJob(newJob)
-const updateJob = (company, updatedJob) => jobDao.updateJob(bid, updatedJob);
+const updateJob = (bid, updatedJob) => jobDao.updateJob(bid, updatedJob);
 
 module.exports = {
     findAllJobs,
-    findJobsByCompany,
-    findJobByPosition,
-    deleteJobByCompany,
+    findJobsById,
+    findJobByCompany,
+    deleteJobByID,
     addNewJob,
     updateJob
 }
