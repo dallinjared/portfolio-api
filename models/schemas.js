@@ -9,6 +9,10 @@ const activitySchema = mongoose.Schema({
 const jobSchema = mongoose.Schema({
     position: String,
     company: String,
+    current: {
+        type: Boolean,
+        default: false
+    },
     type: {
         type: String,
         enum: [

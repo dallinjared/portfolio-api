@@ -1,19 +1,27 @@
 const Model = require('../models/models')
 
+//Get
 const findAllJobs = () => Model.jobModel.find();
 const findJobsById = (bid) => Model.jobModel.findById(bid);
-const deleteJobByID = (bid) => Model.jobModel.deleteOne({_id: bid});
+const findJobByCompany = (cname) => Model.jobModel.find({"company" : cname});
+const findJobByActive = (bool) => Model.jobModel.find({"current" : bool});
+
+//Post
 const addNewJob = (newJob) => Model.jobModel.create(newJob);
+
+//Patch
 const updateJob = (bid, updatedJob) => Model.jobModel.updateOne({"_id": bid}, {$set: updatedJob});
 
-const findJobByCompany = (cname) => Model.jobModel.find({"company" : cname}, );
+//Delete
+const deleteJobByID = (bid) => Model.jobModel.deleteOne({_id: bid});
 
 
 module.exports = {
     findAllJobs,
     findJobsById,
     findJobByCompany,
-    deleteJobByID,
+    findJobByActive,
     addNewJob,
-    updateJob
+    updateJob,
+    deleteJobByID
 }
